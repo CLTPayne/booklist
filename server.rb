@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/namespace'
 require 'mongoid'
 
 Mongoid.load! "mongoid.config"
@@ -25,4 +26,8 @@ class Booklist < Sinatra::Base
   end
 
   run! if server == $0
+end
+
+namespace '/api/v1' do
+
 end
