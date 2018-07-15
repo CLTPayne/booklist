@@ -1,4 +1,4 @@
-require 'sinatra'
+require 'sinatra/base'
 require 'sinatra/namespace'
 require 'mongoid'
 
@@ -20,14 +20,23 @@ class Book
 end
 
 class Booklist < Sinatra::Base
+  register Sinatra:: Namespace
 
   get '/' do
     "Welcome to Charlotte's Booklist"
   end
 
+  namespace '/api/v1' do
+
+    before do
+      content_type 'application/json'
+    end
+
+    get '/books' do
+      Book.all.to_json
+    end
+
+  end
+
   run! if server == $0
-end
-
-namespace '/api/v1' do
-
 end

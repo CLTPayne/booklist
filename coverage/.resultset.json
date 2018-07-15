@@ -1,6 +1,15 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/charlottepayne/Documents/Projects/booklist/spec/features/booklist_api_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/charlottepayne/Documents/Projects/booklist/spec/features/infrastructure_spec.rb": [
         1,
         1,
@@ -10,6 +19,6 @@
         null
       ]
     },
-    "timestamp": 1531686524
+    "timestamp": 1531687584
   }
 }
